@@ -1,17 +1,18 @@
--- SQL script that 
+--  sql to compute the average weighted score for each user
+
 DELIMITER //
 
 CREATE PROCEDURE ComputeAverageWeightedScoreForUsers()
 BEGIN
     UPDATE users u
     SET average_score = (
-        SELECT 
+        SELECT
             IFNULL(SUM(corrections.score * projects.weight) / SUM(projects.weight), 0)
-        FROM 
+        FROM
             corrections
-        JOIN 
+        JOIN
             projects ON projects.id = corrections.project_id
-        WHERE 
+        WHERE
             corrections.user_id = u.id
     );
 END//
