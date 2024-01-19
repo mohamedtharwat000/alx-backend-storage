@@ -1,6 +1,4 @@
--- creates a table users
-
--- attributes id, email, name
+-- creates a users table
 
 CREATE TABLE IF NOT EXISTS users(
     id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
