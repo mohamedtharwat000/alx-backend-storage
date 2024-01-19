@@ -1,5 +1,4 @@
--- trigger that decreases the quantity of an item after adding a new order.
-
+-- this script is used to add a bonus to a user
 
 DELIMITER //
 CREATE PROCEDURE AddBonus(IN user_id INT, IN project_name VARCHAR(255), IN score INT)
