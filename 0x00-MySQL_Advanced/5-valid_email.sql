@@ -1,4 +1,4 @@
--- trigger that decreases the quantity of an item after adding a new order.
+-- this trigger will reset the valid_email flag to 0 if the email is changed
 
 
 DELIMITER //
