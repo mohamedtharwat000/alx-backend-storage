@@ -1,7 +1,7 @@
--- trigger that decreases the quantity of an item after adding a new order.
+-- this file contains the SQL statements to create the tables and triggers
 
 
-CREATE TRIGGER  decreas_quantity 
+CREATE TRIGGER  decreas_quantity
 AFTER INSERT ON orders
 FOR EACH ROW UPDATE items
     SET quantity = quantity - NEW.number
